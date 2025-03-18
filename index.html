@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Discover Hidden Gems</title>
+    <title>Discover Hidden Horizons</title>
 
     <!-- Bootstrap 5 -->
     <link
@@ -12,10 +12,18 @@
     />
 
     <!-- FontAwesome Icons -->
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -26,8 +34,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+     <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- Custom CSS -->
+   
+    <script src="script.js"></script>
   </head>
 
   <body>
@@ -35,24 +46,36 @@
     <div class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1 class="typing-text">
-          Discover Hidden Gems. Travel Beyond the Crowds.
-        </h1>
-        <p>Personalized AI-powered itineraries for offbeat destinations.</p>
+        <h1 class="typing-text">Discover Hidden Horizons</h1>
+        <h3>Travel Beyond the Crowds</h3>
+        <p>Personalised AI-powered itineraries for offbeat destinations.</p>
         <div>
-          <button class="btn btn-custom btn-primary-custom">
-            Join the Beta
+          <button
+            class="btn btn-custom btn-primary-custom"
+            onclick="scrollToSignUp()"
+          >
+            Sign Up
           </button>
-          <button class="btn btn-custom btn-secondary-custom">
-            Explore Hidden Gems
+          <button
+            class="btn btn-custom btn-secondary-custom"
+            onclick="scrollToExplore()"
+          >
+            Explore Hidden Horizons
           </button>
         </div>
       </div>
+      <img
+        src="./assets/image/app-store-google-play-logo-png_seeklogo-370449.png"
+        alt=""
+      />
 
-      <div class="scroll-down">
+      <button class="scroll-down" onClick="scrollToProblemSolution()">
         <i class="fas fa-angle-down"></i>
-      </div>
+      </button>
     </div>
+
+    <!-- Problem Solution -->
+    <div id="problem-solution"></div>
     <section class="problem-solution">
       <div class="container">
         <h2 data-aos="fade-up">
@@ -120,69 +143,63 @@
       </div>
     </section>
 
+    <!-- Section How it Work -->
     <section class="how-it-works">
-      <div class="container">
-        <h2 data-aos="fade-up">How It Works – Simple 3-Step Process</h2>
-        <p data-aos="fade-up">
-          Plan your dream trip effortlessly with AI-powered recommendations.
-        </p>
-
-        <div class="timeline">
-          <!-- Step 1 -->
-          <div class="timeline-step" data-aos="fade-right">
-            <div class="content">
-              <h4>Step 1: Enter Your Preferences</h4>
-              <p>Tell us your budget, interests, and trip duration.</p>
-            </div>
-            <div class="icon">
-              <i class="fas fa-user-cog"></i>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="timeline-step" data-aos="fade-left">
-            <div class="icon">
-              <i class="fas fa-map-marked-alt"></i>
-            </div>
-            <div class="content">
-              <h4>Step 2: AI Suggests Hidden Gems</h4>
-              <p>We build a custom itinerary based on your profile.</p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="timeline-step" data-aos="fade-right">
-            <div class="content">
-              <h4>Step 3: Get Real-Time Travel Insights</h4>
-              <p>Book experiences and receive live updates.</p>
-            </div>
-            <div class="icon">
-              <i class="fas fa-plane-departure"></i>
-            </div>
-          </div>
+      <!-- Title how it Work -->
+      <div class="image-background">
+        <div class="hero-overlay"></div>
+        <div class="content">
+          <h2 data-aos="fade-up">How We Work - Explore Our Features</h2>
+          <p data-aos="fade-up">
+            Plan your dream trip effortlessly with our Itinerary Builder
+          </p>
         </div>
+      </div>
+
+      <!-- Features -->
+      <div class="container">
+        <div class="features">
+          <div class="feature-box" data-aos="fade-right">
+              <i class="fas fa-map-marked-alt feature-icon"></i>
+              <h3 class="feature-title">Explore Hidden Horizons Map</h3>
+              <p class="feature-text">Explore 1,000+ hidden horizons across the world with detailed instructions.</p>
+          </div>
+          <div class="feature-box" data-aos="fade-left" data-aos-delay="200">
+              <i class="fas fa-list-ul feature-icon"></i>
+              <h3 class="feature-title">Try Itinerary Builder</h3>
+              <p class="feature-text">Tell us your mood, interest, trip duration, and who you are traveling with.</p>
+          </div>
+          <div class="feature-box" data-aos="fade-right" data-aos-delay="400">
+              <i class="fas fa-brain feature-icon"></i>
+              <h3 class="feature-title">AI Suggests Hidden Horizons</h3>
+              <p class="feature-text">We build a custom itinerary based on your profile.</p>
+          </div>
+          <div class="feature-box" data-aos="fade-left" data-aos-delay="600">
+              <i class="fas fa-user-plus feature-icon"></i>
+              <h3 class="feature-title">Subscribe For Exclusive Features</h3>
+              <p class="feature-text">Get more features like safety notes, reviews, seasonal horizons, and travel buddies.</p>
+          </div>
       </div>
     </section>
 
+    <!-- Section Explore -->
+    <div id="explore"></div>
     <section class="hidden-gems">
       <div class="container">
-        <h2>Explore Unique, Offbeat Destinations</h2>
-        <p>
-          Discover breathtaking hidden gems worldwide. Affordable, less crowded,
-          and unforgettable.
+        <h2 data-aos="fade-up">Explore Unique, Offbeat Destinations</h2>
+        <p data-aos="fade-up">
+          Discover breathtaking hidden horizons worldwide. Affordable, less
+          crowded, and unforgettable.
         </p>
-
         <!-- Swiper Carousel -->
-        <div class="swiper-container">
+        <div class="swiper-container" data-aos="zoom-in-up">
           <div class="swiper-wrapper">
             <!-- Gem 1 -->
             <div class="swiper-slide">
               <div class="card gem-card">
-                <img src="./assets/image/IMG_0408.jpg" alt="Isle of Skye" />
+                <img src="./assets/image/Europe.avif" alt="Isle of Skye" />
                 <div class="card-body">
-                  <h5>Isle of Skye, Scotland 🇬🇧</h5>
-                  <p>Mystical landscapes and rugged beauty.</p>
-                  <p class="price">💰 ~$80/day</p>
+                  <h5>Europe</h5>
                 </div>
               </div>
             </div>
@@ -190,11 +207,9 @@
             <!-- Gem 2 -->
             <div class="swiper-slide">
               <div class="card gem-card">
-                <img src="./assets/image/IMG_3095_jpg.jpg" alt="Giethoorn" />
+                <img src="./assets/image/England.avif" alt="Giethoorn" />
                 <div class="card-body">
-                  <h5>Giethoorn, Netherlands 🇳🇱</h5>
-                  <p>The Venice of the Netherlands, car-free heaven.</p>
-                  <p class="price">💰 ~$90/day</p>
+                  <h5>England</h5>
                 </div>
               </div>
             </div>
@@ -202,11 +217,28 @@
             <!-- Gem 3 -->
             <div class="swiper-slide">
               <div class="card gem-card">
-                <img src="./assets/image/IMG_5008.JPG" alt="Hallstatt" />
+                <img src="./assets/image/Scotland.avif" alt="Hallstatt" />
                 <div class="card-body">
-                  <h5>Hallstatt, Austria 🇦🇹</h5>
-                  <p>A fairy-tale village by the lake.</p>
-                  <p class="price">💰 ~$100/day</p>
+                  <h5>Scotland</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gem 4 -->
+            <div class="swiper-slide">
+              <div class="card gem-card">
+                <img src="./assets/image/Wales.avif" alt="Hallstatt" />
+                <div class="card-body">
+                  <h5>Wales</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Gem 5 -->
+            <div class="swiper-slide">
+              <div class="card gem-card">
+                <img src="./assets/image/Northern Ireland.avif" alt="Hallstatt" />
+                <div class="card-body">
+                  <h5>Northern Ireland</h5>
                 </div>
               </div>
             </div>
@@ -224,24 +256,25 @@
 
     <section class="social-proof">
       <div class="container">
-        <h2 data-aos="fade-up">What Travelers Are Saying</h2>
-        <p data-aos="fade-up">
-          Join 100+ explorers discovering hidden destinations with us!
+        <h2 data-aos="fade-up">What Travellers Are Saying</h2>
+        <p class="subtitle" data-aos="fade-up">
+          Join our Hidden Horizons community to find your best travel buddy and
+          explore the world together!
         </p>
 
-        <!-- Swiper Carousel -->
+        <!-- Comments -->
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <!-- Review 1 -->
-            <div class="swiper-slide">
+              <!-- Review 1 -->
               <div class="review-card">
+                
                 <div class="reviewer">
                   <img
-                    src="https://source.unsplash.com/100x100/?woman,portrait"
+                    src="./assets/image/face_1.jpg"
                     alt="Reviewer 1"
                   />
                   <div>
-                    <div class="name">Emma Johnson</div>
+                    <div class="name">William Johnson</div>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
                   </div>
                 </div>
@@ -250,19 +283,19 @@
                   heard of! Highly recommend."
                 </p>
               </div>
-            </div>
+       
 
-            <!-- Review 2 -->
-            <div class="swiper-slide">
+              <!-- Review 2 -->
               <div class="review-card">
                 <div class="reviewer">
                   <img
-                    src="https://source.unsplash.com/100x100/?man,portrait"
+                    src="./assets/image/face_2.jpg"
                     alt="Reviewer 2"
                   />
                   <div>
-                    <div class="name">Michael Lee</div>
-                    <div class="rating">⭐⭐⭐⭐</div>
+                    <div class="name">Rajesh Kumar
+                    </div>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
                   </div>
                 </div>
                 <p>
@@ -270,18 +303,37 @@
                   has been amazing."
                 </p>
               </div>
-            </div>
+       
 
-            <!-- Review 3 -->
-            <div class="swiper-slide">
+              <!-- Review 3 -->
+     
               <div class="review-card">
                 <div class="reviewer">
                   <img
-                    src="https://source.unsplash.com/100x100/?travel,man"
+                    src="./assets/image/face_3.jpg"
                     alt="Reviewer 3"
                   />
                   <div>
                     <div class="name">Sophia Carter</div>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                  </div>
+                </div>
+                <p>
+                  "Best way to discover new places without the usual tourist
+                  crowds. Love it!"
+                </p>
+              </div>
+
+              <!-- Review 4  -->
+ 
+              <div class="review-card">
+                <div class="reviewer">
+                  <img
+                    src="./assets/image/face_4.jpg"
+                    alt="Reviewer 4"
+                  />
+                  <div>
+                    <div class="name">Michael Lee </div>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
                   </div>
                 </div>
@@ -303,13 +355,14 @@
       </div>
     </section>
 
+    <!-- CTA Section -->
+    <div id="signup"></div>
     <section class="cta-section" data-aos="fade-up">
       <div class="container">
         <div class="cta-container">
-          <h2>Be the First to Access Exclusive Hidden Gems!</h2>
-          <p>
-            Sign up now and get a free travel guide to offbeat destinations!
-          </p>
+          <h2>Be the First to Access Exclusive Hidden Horizons!</h2>
+          <p>Travel beyond the crowds and stress-free with us.</p>
+          <p>Sign up now and get a free travel guide to offbeat destinations</p>
 
           <!-- Email Signup Form -->
           <form class="cta-form">
@@ -325,8 +378,8 @@
         <div class="row">
           <!-- Logo + Slogan -->
           <div class="col-lg-3 col-md-6">
-            <h4 class="footer-logo">🌍 TravelBeyond</h4>
-            <p>Explore hidden gems & travel beyond the crowds.</p>
+            <h4 class="footer-logo">🌍 HiddenHorizons</h4>
+            <p>Explore hidden horizons & travel beyond the crowds.</p>
           </div>
 
           <!-- Quick Links -->
@@ -343,9 +396,9 @@
           <!-- Contact Information -->
           <div class="col-lg-3 col-md-6">
             <h5>Contact</h5>
-            <p>Email: support@travelbeyond.com</p>
-            <p>Phone: +1 234 567 890</p>
-            <p>Location: New York, USA</p>
+            <p>Email: info@hiddenhorizons.ac.uk</p>
+            <p>Phone: +44 7803 262626</p>
+            <p>Location: Leeds, United Kingdom</p>
           </div>
 
           <!-- Social Media -->
@@ -362,7 +415,7 @@
 
         <!-- Copyright -->
         <div class="footer-bottom">
-          <p>© 2025 TravelBeyond. All Rights Reserved.</p>
+          <p>© 2025 HiddenHorizons. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
@@ -374,7 +427,7 @@
       AOS.init();
 
       // Typing Effect
-      const text = "Discover Hidden Gems. Travel Beyond the Crowds.";
+      const text = "Discover Hidden Horizons";
       let index = 0;
       function typeEffect() {
         if (index < text.length) {
