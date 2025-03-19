@@ -24,6 +24,7 @@
 .hero-content {
   position: relative;
   z-index: 2;
+  padding: 80px 20px;
 }
 
 .hero h1 {
@@ -63,6 +64,33 @@
     opacity: 0;
   }
 }
+/* Responsive Hero Section  */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px !important;
+  }
+  h2 {
+    font-size: 24px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+  h4 {
+    font-size: 18px !important;
+  }
+  h5 {
+    font-size: 16px !important;
+  }
+  p {
+    font-size: 14px !important;
+  }
+  button {
+    font-size: 14px !important;
+  }
+  i {
+    font-size: 24px !important;
+  }
+}
 
 /* ======= CTA BUTTONS ======= */
 .btn-custom {
@@ -95,7 +123,16 @@
   color: black;
   transform: scale(1.1);
 }
-
+@media (max-width: 768px) {
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .button-group button {
+    width: 100%;
+  }
+}
 /* ======= SCROLL DOWN ICON ======= */
 .scroll-down {
   position: absolute;
@@ -120,7 +157,7 @@
 }
 
 .problem-solution {
-  padding: 80px 0;
+  padding: 80px 20px;
   background: #f8f9fa;
   text-align: center;
 }
@@ -199,9 +236,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10px;
   position: relative;
-  padding: 80px 0px;
+  padding: 80px 20px;
 }
 .how-it-works .image-background .content {
   position: relative;
@@ -231,8 +267,8 @@
 .feature-box {
   background: white;
   padding: 30px;
-  width: 90%;
-  height: auto;
+  width: 100%;
+  min-height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,7 +356,7 @@
 /* Social Proof */
 /* ======= SECTION STYLE ======= */
 .social-proof {
-  padding: 80px 0;
+  padding: 80px 20px;
   background: url(../image/IMG_5008.JPG) no-repeat center center/cover;
   position: relative;
   color: white;
@@ -350,6 +386,7 @@
 /* ======= REVIEW CARD ======= */
 .review-card {
   background: white;
+  position: relative;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -402,11 +439,23 @@
   font-weight: 900;
   font-family: "Font Awesome 6 Free";
   display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   color: #555;
   font-size: 20px;
+  z-index: 2;
 }
-
+@media (max-width: 767.98px) {
+  .review-card .name {
+    font-size: 14px;
+  }
+  .review-card .rating {
+    font-size: 14px;
+  }
+}
 /* ======= SWIPER BUTTONS ======= */
 .swiper-button-next,
 .swiper-button-prev {
@@ -504,7 +553,6 @@
 }
 
 .footer p {
-  margin: 5px 0;
   font-size: 14px;
 }
 

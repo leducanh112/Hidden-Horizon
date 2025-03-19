@@ -51,7 +51,7 @@
         <h1 class="typing-text">Discover Hidden Horizons</h1>
         <h3>Travel Beyond the Crowds</h3>
         <p>Personalised AI-powered itineraries for offbeat destinations.</p>
-        <div>
+        <div class="button-group">
           <button
             class="btn btn-custom btn-primary-custom"
             onclick="scrollToSignUp()"
@@ -158,37 +158,61 @@
         </div>
         <!-- Features -->
         <div class="container">
-          <div class="features">
-            <div class="feature-box" data-aos="fade-right">
-              <i class="fas fa-map-marked-alt feature-icon"></i>
-              <h4 class="feature-title">Explore Hidden Horizons Map</h4>
-              <p class="feature-text">
-                Explore 1,000+ hidden horizons across the world with detailed
-                instructions.
-              </p>
+          <div class="row g-5">
+            <div class="features"></div>
+            <div class="col-md-6 mb-3">
+              <div class="feature-box h-100" data-aos="fade-right">
+                <i class="fas fa-map-marked-alt feature-icon"></i>
+                <h4 class="feature-title">Explore Hidden Horizons Map</h4>
+                <p class="feature-text">
+                  Explore 1,000+ hidden horizons across the world with detailed
+                  instructions.
+                </p>
+              </div>
             </div>
-            <div class="feature-box" data-aos="fade-left" data-aos-delay="200">
-              <i class="fas fa-list-ul feature-icon"></i>
-              <h4 class="feature-title">Try Itinerary Builder</h4>
-              <p class="feature-text">
-                Tell us your mood, interest, trip duration, and who you are
-                traveling with.
-              </p>
+
+            <div class="col-md-6 mb-3">
+              <div
+                class="feature-box h-100"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                <i class="fas fa-list-ul feature-icon"></i>
+                <h4 class="feature-title">Try Itinerary Builder</h4>
+                <p class="feature-text">
+                  Tell us your mood, interest, trip duration, and who you are
+                  traveling with.
+                </p>
+              </div>
             </div>
-            <div class="feature-box" data-aos="fade-right" data-aos-delay="400">
-              <i class="fas fa-brain feature-icon"></i>
-              <h4 class="feature-title">AI Suggests Hidden Horizons</h4>
-              <p class="feature-text">
-                We build a custom itinerary based on your profile.
-              </p>
+
+            <div class="col-md-6 mb-3">
+              <div
+                class="feature-box h-100"
+                data-aos="fade-right"
+                data-aos-delay="400"
+              >
+                <i class="fas fa-brain feature-icon"></i>
+                <h4 class="feature-title">AI Suggests Hidden Horizons</h4>
+                <p class="feature-text">
+                  We build a custom itinerary based on your profile.
+                </p>
+              </div>
             </div>
-            <div class="feature-box" data-aos="fade-left" data-aos-delay="600">
-              <i class="fas fa-user-plus feature-icon"></i>
-              <h4 class="feature-title">Subscribe For Exclusive Features</h4>
-              <p class="feature-text">
-                Get more features like safety notes, reviews, seasonal horizons,
-                and travel buddies.
-              </p>
+
+            <div class="col-md-6 mb-3">
+              <div
+                class="feature-box h-100"
+                data-aos="fade-left"
+                data-aos-delay="600"
+              >
+                <i class="fas fa-user-plus feature-icon"></i>
+                <h4 class="feature-title">Subscribe For Exclusive Features</h4>
+                <p class="feature-text">
+                  Get more features like safety notes, reviews, seasonal
+                  horizons, and travel buddies.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -279,10 +303,11 @@
         </p>
 
         <!-- Comments -->
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <!-- Review 1 -->
-            <div class="review-card">
+
+        <div class="row">
+          <!-- Review 1 -->
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="review-card h-100">
               <div class="reviewer">
                 <img src="./assets/image/face_1.jpg" alt="Reviewer 1" />
                 <div>
@@ -295,9 +320,11 @@
                 heard of! Highly recommend."
               </p>
             </div>
+          </div>
 
-            <!-- Review 2 -->
-            <div class="review-card">
+          <!-- Review 2 -->
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="review-card h-100">
               <div class="reviewer">
                 <img src="./assets/image/face_2.jpg" alt="Reviewer 2" />
                 <div>
@@ -310,10 +337,10 @@
                 has been amazing."
               </p>
             </div>
-
-            <!-- Review 3 -->
-
-            <div class="review-card">
+          </div>
+          <!-- Review 3 -->
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="review-card h-100">
               <div class="reviewer">
                 <img src="./assets/image/face_3.jpg" alt="Reviewer 3" />
                 <div>
@@ -326,10 +353,11 @@
                 crowds. Love it!"
               </p>
             </div>
+          </div>
 
-            <!-- Review 4  -->
-
-            <div class="review-card">
+          <!-- Review 4  -->
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="review-card h-100">
               <div class="reviewer">
                 <img src="./assets/image/face_4.jpg" alt="Reviewer 4" />
                 <div>
@@ -343,13 +371,6 @@
               </p>
             </div>
           </div>
-
-          <!-- Navigation Arrows -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
