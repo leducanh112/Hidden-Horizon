@@ -125,6 +125,8 @@
 }
 @media (max-width: 767.98px) {
   .button-group {
+    padding-left: 12px;
+    padding-right: 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -539,6 +541,8 @@
 /* Responsive */
 @media (max-width: 767.98px) {
   .cta-form {
+    padding-left: 12px;
+    padding-right: 12px;
     flex-direction: column;
     gap: 10px;
   }
