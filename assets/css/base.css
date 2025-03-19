@@ -35,7 +35,11 @@ p {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
+h2 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 .btn {
   padding: 12px 24px;
   font-size: 1rem;
