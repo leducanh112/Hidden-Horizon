@@ -282,7 +282,7 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .feature-box:hover {
-  transform: scale(1.2);
+  transform: scale(1.05) !important;
   box-shadow: 0 15px 30px rgba(255, 255, 255, 0.6);
 }
 .feature-icon {
@@ -321,8 +321,8 @@
 /* ======= CARD STYLE ======= */
 .gem-card {
   /* border-radius: 12px; */
+  margin: 10px;
   padding: 10px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,7 +390,7 @@
 
 .social-proof .container {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .social-proof .container .subtitle {
@@ -404,19 +404,13 @@
   position: relative;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   text-align: left;
   transition: transform 0.3s ease-in-out;
 }
-.social-proof .review-card {
-  margin-left: 40px;
-}
-.social-proof .review-card:nth-child(1) {
-  margin-left: 0px;
-}
 
 .review-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
 }
 
 .review-card .reviewer {
