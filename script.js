@@ -12,9 +12,15 @@ function scrollToProblemSolution() {
     .scrollIntoView({ behavior: "smooth" });
 }
 
-function sendData() {
+function sendData(event) {
   var email = document.getElementById("email-input");
   if (!email.checkValidity()) {
+    Swal.fire({
+      icon: "warning",
+      title: "Please enter a valid email!",
+      text: "",
+      confirmButtonColor: "#d33",
+    });
     return;
   }
   var url =
@@ -25,6 +31,12 @@ function sendData() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email: email.value }),
   }).then(() => {
-    alert("Email submitted successfully!");
+    Swal.fire({
+      icon: "success",
+      title: "Success!",
+      text: "Email submitted successfully!",
+      confirmButtonColor: "#4CAF50",
+    });
+    email.value = "";
   });
 }

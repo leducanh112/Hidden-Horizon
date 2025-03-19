@@ -37,7 +37,8 @@
      <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-   
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
   </head>
 
@@ -367,7 +368,7 @@
           <!-- Email Signup Form -->
           <form id="emailForm" class="cta-form">
             <input id="email-input" type="email" placeholder="Enter your email..." required />
-            <button onclick="sendData()" type="submit">Sign Up</button>
+            <button onclick="sendData(event)" type="button">Sign Up</button>
           </form>
         </div>
       </div>
