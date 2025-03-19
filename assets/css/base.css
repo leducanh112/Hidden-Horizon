@@ -10,6 +10,9 @@
   --black-bold: #333333;
   --orange: #ff7f50;
 }
+* {
+  box-sizing: border-box;
+}
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
